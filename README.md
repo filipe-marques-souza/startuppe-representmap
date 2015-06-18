@@ -1,2 +1,2 @@
 # startuppe-representmap
-Startup community of Pernambuco on a custom Google map. Based on the code for http://represent.la
+Startup community of Pernambuco (http://startuppe.com) on a Google map. Based on http://represent.la
