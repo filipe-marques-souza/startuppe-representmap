@@ -63,7 +63,7 @@ html, body, #map_canvas
   background-color: #fff;
   width: 100%;
   height: 60px;
-  /*border-bottom: 1px solid #ccc;*/
+  border-bottom: 1px solid #ccc;
   /*overflow: hidden;*/
   min-width: 850px;
   background: #fcfcfc; /* Old browsers */
@@ -74,8 +74,8 @@ html, body, #map_canvas
   background: -ms-linear-gradient(top,  #ffffff 0%,#dddddd 100%); /* IE10+ */
   background: linear-gradient(to bottom,  #ffffff 0%,#dddddd 100%); /* W3C */*/
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#dddddd',GradientType=0 ); /* IE6-9 */
-  border-bottom: 1px solid #333;
-  background: linear-gradient(to bottom,#333333 0%,#333333 100%);
+  /* border-bottom: 1px solid #ccc; */
+  background: linear-gradient(to bottom,#fff 0%,#fefefe 100%);
 }
 .topbar .left
 {
@@ -104,7 +104,7 @@ html, body, #map_canvas
 .topbar .logo a img
 {
   display: block;
-  width: 130px;
+  width: 155px;
 }
 .topbar .buttons
 {
@@ -196,7 +196,7 @@ html, body, #map_canvas
   font-weight: normal;
   line-height: 1.3em;
   padding: 12px 10px 0px 10px;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  
 }
 .menu .blurb a,
 .menu .attribution a
@@ -206,7 +206,7 @@ html, body, #map_canvas
 .menu .blurb a:hover,
 .menu .attribution a:hover
 {
-  color: #fff;
+  color: #5BABDA;
 }
 .menu .blurb
 {
@@ -229,7 +229,7 @@ html, body, #map_canvas
   border-left: 1px solid #ccc;
   border-top: 1px solid #ccc;
   overflow-y: scroll;
-  background-color: #333;
+  background-color: #fefefe;
 }
 .typeahead.dropdown-menu
 {
@@ -243,8 +243,8 @@ html, body, #map_canvas
 }
 .list .category
 {
-  font-size: 11pt;
-  color: #eee;
+  font-size: 10pt;
+  color: #222;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   overflow: hidden;
 }
@@ -269,7 +269,7 @@ html, body, #map_canvas
   display: block;
   overflow: hidden;
   padding: 3px 6px;
-  color: #eee;
+  color: #777;
 }
 .list .category .category_info:hover 
 {
@@ -319,7 +319,7 @@ html, body, #map_canvas
   font-size: 8pt;
   padding: 5px 10px;
   outline: none;
-  color: #ccc;
+  color: #999;
   font-weight: normal;
   line-height: 1.4em; 
 }
@@ -328,12 +328,12 @@ html, body, #map_canvas
   background-color: rgba(255,255,255,.03);
   text-decoration: none;
   outline: none;
-  color: #fff;
+  color: #5BABDA;
 }
 .list .list-items li a:active
 {
-  color: #fff;
-  background-color: #444;
+  color: #333;
+  background-color: #efefef;
 }
 
 
@@ -417,7 +417,7 @@ html, body, #map_canvas
 /* add marker modal */
 #modal_add
 {
-  margin-top: -350px;
+  margin-top: -330px;
 }
 #modal_add .modal-body
 {
@@ -446,7 +446,7 @@ html, body, #map_canvas
 /* get info modal */
 #modal_info
 {
-  margin-top: -350px;
+  margin-top: -310px;
 }
 #modal_info .modal-body
 {
@@ -527,7 +527,7 @@ html, body, #map_canvas
   font-weight: normal;
   line-height: 1.3em;
   padding: 12px 10px 0px 10px;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  
 }
 
 .powered p {
@@ -542,3 +542,39 @@ html, body, #map_canvas
 .logoPD img {
   width: 100px;
 }
+
+
+.logos {
+  
+  width: 100%;
+}
+
+
+.logos .logomarca{
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  float: left;
+  height: 115px;
+  margin: 1%;
+  text-align: center;
+  width: 166px;
+}
+
+.logos .logomarca:hover {
+  background-color:rgba(0,0,0,0.05);
+  transition:300ms
+}
+
+.parceiro {
+  margin: 20px 0 20px 0;
+  width: 115px;
+
+}
+
+
+
+
+
+
+
+

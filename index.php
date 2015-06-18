@@ -15,7 +15,7 @@ include_once "header.php";
     Create a map for your startup community!
     https://github.com/abenzer/represent-map
     -->
-    <title><?= $title_tag ?></title>
+    <title>Startup PE - Mapa da Comunidade de Startups de Pernambuco</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta charset="UTF-8">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700|Open+Sans:400,700' rel='stylesheet' type='text/css'>
@@ -374,7 +374,7 @@ include_once "header.php";
     <!-- display error overlay if something went wrong -->
     <?php echo $error; ?>
 
-    <!-- facebook like button code -->
+    <!-- facebook like button code 
     <div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
@@ -383,6 +383,18 @@ include_once "header.php";
   js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.3";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
+
+-->
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3&appId=1307516132723132";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
 
     <!-- google map -->
     <div id="map_canvas"></div>
@@ -394,8 +406,9 @@ include_once "header.php";
           <div class="share">
           <!-- <a href="https://twitter.com/share" class="twitter-share-button" data-url="<?= $domain ?>" data-text="<?= $twitter['share_text'] ?>" data-via="<?= $twitter['username'] ?>" data-count="none">Tweet</a> -->
             <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-            <div class="fb-like" data-href="https://www.facebook.com/aceleradorajump" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div>
-          </div>
+            <!--<div class="fb-like" data-href="https://www.facebook.com/aceleradorajump" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div>-->
+         
+         <div class="fb-share-button" data-href="https://www.facebook.com/groups/startuppe/" data-layout="button_count"></div>   </div>
         </div>
         <div class="left">
           <div class="buttons">
@@ -474,7 +487,7 @@ include_once "header.php";
           <?=$attribution?>
         </li>
         <li class="powered">
-          <p>Criado por:</p>
+          <p>Parceiros:</p>
           <a class="logoJump" href="http://www.jumpbrasil.com/"><img src='./images/logoJump.png' alt='' /></a>
           <a class="logoPD" href="http://www.portodigital.org/"><img src='./images/logoPortoDigital.png' alt='' /></a>
         </li>
@@ -485,7 +498,7 @@ include_once "header.php";
     <div class="modal hide" id="modal_info">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">×</button>
-        <h3>About this Map</h3>
+        <h3>Sobre este mapa</h3>
       </div>
       <div class="modal-body">
         <p>
@@ -501,8 +514,29 @@ include_once "header.php";
           Vamos colocar PE no mapa juntos!
         </p>
         <p>
-        Dúvidas? Feedbacks? Fale conosco: contato@jumpbrasil.com
+        Dúvidas? Feedbacks? Fale conosco: contato@startuppe.com
         </p>
+
+        <div class="logos" style="display: block;">
+
+                <div>
+                  <h4>Parceiros</h4>
+                </div> 
+                 <p>
+        Alguns parceiros que apoiam esta comunidade:
+        </p>     
+                 <a class="logomarca" href="http://www.jumpbrasil.com/" target="_blank">
+                  <img class="parceiro" src="http://startuppe.com/images/logoJump.png" alt="JUMP Brasil" title="JUMP Brasil" >
+                </a>
+                <a class="logomarca" href="http://www.portodigital.org/" target="_blank" style="  padding-top: 20px;">
+                  <img class="parceiro" src="http://startuppe.com/images/logoPortoDigital.png" alt="Porto Digital" title="Porto Digital" style="  width: 140px;" >
+                </a>
+                <a class="logomarca" href="http://www.jumpbrasil.com/" target="_blank">
+                  <img class="parceiro" src="http://startuppe.com/images/logoJump.png" alt="JUMP Brasil" title="JUMP Brasil" >
+                </a>
+
+        </div>
+
         <p>
           Este mapa foi construído a partir do <a href="https://github.com/abenzer/represent-map">RepresentMap</a> - um projeto de código aberto que visa 
           ajudar as comunidades de startups do mundo a criarem seus próprios mapas.

@@ -3,13 +3,13 @@
 $db_host = "mysql.hostinger.com.br";
 
 // database name
-$db_name = "u534457382_jump";
+$db_name = "u986691890_db";
 
 // database user name
-$db_user = "u534457382_jump2";
+$db_user = "u986691890_jump";
 
 // database password
-$db_pass = "1q2w3e4r5t";
+$db_pass = "Jump2015";
 
 // admin username
 $admin_user = "mapadmin";
