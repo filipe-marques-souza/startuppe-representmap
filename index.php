@@ -484,6 +484,7 @@ include_once "header.php";
                     <a href='#' onMouseOver=\"markerListMouseOver('".$marker_id."')\" onMouseOut=\"markerListMouseOut('".$marker_id."')\" onClick=\"goToMarker('".$marker_id."');\">".$marker['title']."</a>
                   </li>
               ";
+              print_r($marker['title']);
               $marker_id++;
             }
             echo "
