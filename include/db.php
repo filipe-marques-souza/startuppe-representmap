@@ -92,7 +92,7 @@ $head_html = "";
 $title_tag = "JUMP Brasil";
 
 // The latitude & longitude to center the initial map
-$lat_lng = "-8.0463005,-34.9017823";
+$lat_lng = "-8.057599, -34.871695";
 
 // Domain to use for various links
 $domain = "http://www.jumpbrasil.com";
@@ -104,7 +104,7 @@ $twitter = array(
 );
 
 // Short blurb about this site (visible to visitors)
-$blurb = "Este mapa foi criado para se conectar e promover a comunidade de startups em Pernambuco, Brazil.<br/></br>contato@jumpbrasil.com";
+$blurb = "Este mapa foi criado para se conectar e promover a comunidade de startups em Pernambuco, Brazil.<br/></br>contato@startuppe.com";
 
 // attribution (must leave link intact, per our license)
 $attribution = "

@@ -145,7 +145,7 @@ html, body, #map_canvas
   float: right;
   line-height: 0px;
   color: #777;
-  padding: 17px 10px 20px 10px;
+  padding: 22px 10px 20px 10px;
 }
 .topbar .share div,
 .topbar .share iframe
@@ -160,18 +160,20 @@ html, body, #map_canvas
 }
 .topbar .search
 {
+   margin-left: 20px;
   float: left;
   line-height: 60px;
 }
 .topbar .search input
 {
   margin-top: 8px;
-  width: 160px;
+    width: 180px;
   font-size: 8pt;
   padding-left: 26px;
   background-image: url("./images/icon-search.png");
   background-position: 8px center;
   background-repeat: no-repeat;
+
 }
 
 
@@ -214,7 +216,8 @@ html, body, #map_canvas
 }
 .menu .attribution
 {
-  padding-bottom: 40px;
+  padding-bottom: 10px;
+ border-bottom: 1px solid #f5f5f5;
 }
 
 
@@ -526,7 +529,7 @@ html, body, #map_canvas
   text-align: center;
   font-weight: normal;
   line-height: 1.3em;
-  padding: 12px 10px 0px 10px;
+  padding: 0px 10px 0px 10px;
   
 }
 

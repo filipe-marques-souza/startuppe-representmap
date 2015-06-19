@@ -23,12 +23,23 @@ include_once "header.php";
     <link href="./bootstrap/css/bootstrap-responsive.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="map.css?nocache=289671982568" type="text/css" />
     <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="mobile.css" type="text/css" />
+    <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
     <script src="./scripts/jquery-1.7.1.js" type="text/javascript" charset="utf-8"></script>
     <script src="./bootstrap/js/bootstrap.js" type="text/javascript" charset="utf-8"></script>
     <script src="./bootstrap/js/bootstrap-typeahead.js" type="text/javascript" charset="utf-8"></script>
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
     <script type="text/javascript" src="./scripts/label.js"></script>
 
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-64310041-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
     <script type="text/javascript">
       var map;
       var infowindow = null;
@@ -131,7 +142,7 @@ include_once "header.php";
 
         // set map options
         var myOptions = {
-          zoom: 11,
+          zoom: 14,
           //minZoom: 10,
           center: new google.maps.LatLng(<?= $lat_lng ?>),
           mapTypeId: google.maps.MapTypeId.ROADMAP,
@@ -167,13 +178,13 @@ include_once "header.php";
         markers = new Array();
         <?php
           $types = Array(
-              Array('startup', 'Startups'),
+              Array('startup', 'Empresas'),
               Array('aceleradora','Aceleradoras'),
               Array('incubadora', 'Incubadoras'),
               Array('coworking', 'Coworking'),
               Array('investidor', 'Investidores'),
               Array('service', 'Consulting'),
-              Array('hackerspace', 'Hackerspaces'),
+              Array('hackerspace', 'Iniciativas'),
               Array('evento', 'Eventos'),
               );
           $marker_id = 0;
@@ -303,7 +314,7 @@ include_once "header.php";
             marker_id = jQuery.inArray(obj, markerTitles);
             if(marker_id > -1) {
               map.panTo(gmarkers[marker_id].getPosition());
-              map.setZoom(15);
+              map.setZoom(16);
               google.maps.event.trigger(gmarkers[marker_id], 'click');
             }
             $("#search").val("");
@@ -316,7 +327,7 @@ include_once "header.php";
       function goToMarker(marker_id) {
         if(marker_id) {
           map.panTo(gmarkers[marker_id].getPosition());
-          map.setZoom(15);
+          map.setZoom(16);
           google.maps.event.trigger(gmarkers[marker_id], 'click');
         }
       }
@@ -414,9 +425,9 @@ include_once "header.php";
           <div class="buttons">
             <a href="#modal_info" class="btn btn-large btn-info" data-toggle="modal"><i class="icon-info-sign icon-white"></i>Sobre este Mapa</a>
             <?php if($sg_enabled) { ?>
-              <a href="#modal_add_choose" class="btn btn-large btn-success" data-toggle="modal"><i class="icon-plus-sign icon-white"></i>Adicionar Negócio</a>
+              <a href="#modal_add_choose" class="btn btn-large btn-success" data-toggle="modal"><i class="icon-plus-sign icon-white"></i>Adicionar ao mapa</a>
             <? } else { ?>
-              <a href="#modal_add" class="btn btn-large btn-success" data-toggle="modal"><i class="icon-plus-sign icon-white"></i>Adicionar Negócio</a>
+              <a href="#modal_add" class="btn btn-large btn-success" data-toggle="modal"><i class="icon-plus-sign icon-white"></i>Adicionar ao mapa</a>
             <? } ?> 
           </div>
           <div class="logo">
@@ -425,7 +436,7 @@ include_once "header.php";
             </a>
           </div>
           <div class="buttons">
-            <a href="#modal_investor" class="btn btn-large btn-warning" data-toggle="modal"><i class="icon-info-sign icon-white"></i>Sou Investidor</a>
+           <!-- <a href="#modal_investor" class="btn btn-large btn-warning" data-toggle="modal" ><i class="icon-info-sign icon-white"></i>Sou Investidor</a> -->
             <!-- <a href="#modal_jobs" class="btn btn-large btn-danger" data-toggle="modal"><i class="icon-info-sign icon-white"></i>Jobs</a> -->
           </div>
           <div class="search">
@@ -440,13 +451,13 @@ include_once "header.php";
       <ul class="list" id="list">
         <?php
          $types = Array(
-              Array('startup', 'Startups'),
+              Array('startup', 'Empresas'),
               Array('aceleradora','Aceleradoras'),
               Array('incubadora', 'Incubadoras'),
               Array('coworking', 'Coworking'),
               Array('investidor', 'Investidores'),
-              //Array('service', 'Consulting'),
-              //Array('hackerspace', 'Hackerspaces')
+              //Array('evento', 'Eventos'),
+              Array('hackerspace', 'Iniciativas')
               );
           if($show_events == true) {
             $types[] = Array('evento', 'Eventos');
@@ -520,7 +531,7 @@ include_once "header.php";
         <div class="logos" style="display: block;">
 
                 <div>
-                  <h4>Parceiros</h4>
+                  <h4>PARCEIROS</h4>
                 </div> 
                  <p>
         Alguns parceiros que apoiam esta comunidade:
@@ -531,8 +542,8 @@ include_once "header.php";
                 <a class="logomarca" href="http://www.portodigital.org/" target="_blank" style="  padding-top: 20px;">
                   <img class="parceiro" src="http://startuppe.com/images/logoPortoDigital.png" alt="Porto Digital" title="Porto Digital" style="  width: 140px;" >
                 </a>
-                <a class="logomarca" href="http://www.jumpbrasil.com/" target="_blank">
-                  <img class="parceiro" src="http://startuppe.com/images/logoJump.png" alt="JUMP Brasil" title="JUMP Brasil" >
+                <a class="logomarca" href="http://www.locawebcorp.com.br/" target="_blank" style="  padding-top: 20px;">
+                  <img class="parceiro" src="http://startuppe.com/images/logolocaweb.png" alt="Locaweb Corp" title="Locaweb Corp" >
                 </a>
 
         </div>
@@ -540,7 +551,6 @@ include_once "header.php";
         <p>
           Este mapa foi construído a partir do <a href="https://github.com/abenzer/represent-map">RepresentMap</a> - um projeto de código aberto que visa 
           ajudar as comunidades de startups do mundo a criarem seus próprios mapas.
-          Confira alguns <a target="_blank" href="http://www.representmap.com">mapas de startups</a> criados por outras comunidades!
         </p>
       </div>
       <div class="modal-footer">
@@ -554,7 +564,7 @@ include_once "header.php";
       <form action="add.php" id="modal_addform" class="form-horizontal">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">×</button>
-          <h3>Adicionar um negócio!</h3>
+          <h3>Adicionar ao mapa</h3>
         </div>
         <div class="modal-body">
           <div id="result"></div>
@@ -581,13 +591,13 @@ include_once "header.php";
               <label class="control-label" for="input01">Tipo do negócio</label>
               <div class="controls">
                 <select name="type" id="add_type" class="input-xlarge">
-                  <option value="startup">Startup</option>
+                  <option value="startup">Empresa</option>
                   <option value="aceleradora">Aceleradora</option>
                   <option value="incubadora">Incubadora</option>
                   <option value="coworking">Coworking</option>
                   <option value="investidor">Investidor</option>
-                  <!-- <option value="service">Consulting Firm</option> -->
-                  <!-- <option value="hackerspace">Hackerspace</option> -->
+                  <option value="evento">Evento</option>
+                  <option value="hackerspace">Iniciativa</option> -->
                 </select>
               </div>
             </div>
@@ -596,8 +606,7 @@ include_once "header.php";
               <div class="controls">
                 <input type="text" class="input-xlarge" name="address" id="add_address">
                 <p class="help-block">
-                  Você deve colocar <b>o endereço completo (inclusive a cidade e o CEP)</b>.
-                  Se funcionar no Google Maps, funcionará aqui.
+                  Você deve colocar o endereço que funcione no Google Maps. 
                 </p>
               </div>
             </div>
@@ -630,13 +639,13 @@ include_once "header.php";
 
 
     <!-- add something modal -->
-    <div class="modal hide" id="modal_investor">
+    <div class="modal hide" id="modal_investor" >
       <form action="add.php" id="" class="form-horizontal">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">×</button>
           <h3>Investidores</h3>
         </div>
-        <div class="modal-body">
+        <div class="modal-body" >
           <iframe src="https://docs.google.com/a/jumpbrasil.com/forms/d/1hPzmy3cIycTLsxkM9xR52PdfUOIJvrKEWTXWUcwIOw0/viewform?embedded=true" width="500" height="500" frameborder="0" marginheight="0" marginwidth="0">Carregando...</iframe>
         </div>
         <div class="modal-footer">

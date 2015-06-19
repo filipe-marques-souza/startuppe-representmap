@@ -14,7 +14,7 @@ $description = mysqli_real_escape_string($connection, parseInput($_POST['descrip
 
 // validate fields
 if(empty($title) || empty($type) || empty($address) || empty($uri) || empty($description) || empty($owner_name) || empty($owner_email)) {
-  echo "All fields are required - please try again.";
+  echo "Preencha corretamente. Todos os campos são obrigatórios.";
   exit;
   
 } else {
