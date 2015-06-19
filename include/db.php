@@ -1,21 +1,19 @@
 <?php
-// mysql hostname
-$db_host = "mysql.hostinger.com.br";
 
-// database name
-$db_name = "u986691890_db";
+$url = parse_url(getenv("CLEARDB_DATABASE_URL"));
 
-// database user name
-$db_user = "u986691890_jump";
+$db_host = $url["host"];
+$db_user = $url["user"];
+$db_pass = $url["pass"];
+$db_name = substr($url["path"], 1);
 
-// database password
-$db_pass = "Jump2015";
 
 // admin username
-$admin_user = "mapadmin";
+$admin_user = getenv("ADMIN_USER_MAP");
 
 // admin password
-$admin_pass = "jumpBRmap";
+$admin_pass = getenv("ADMIN_USER_MAP_PASS");
+
 
 
 // StartupGenome.com integration (optional)
