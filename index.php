@@ -183,7 +183,7 @@ include_once "header.php";
               Array('incubadora', 'Incubadoras'),
               Array('coworking', 'Coworking'),
               Array('investidor', 'Investidores'),
-              Array('service', 'Consulting'),
+              Array('service', 'Maker Space'),
               Array('hackerspace', 'Iniciativas'),
               Array('evento', 'Eventos'),
               );
@@ -456,7 +456,7 @@ include_once "header.php";
               Array('incubadora', 'Incubadoras'),
               Array('coworking', 'Coworking'),
               Array('investidor', 'Investidores'),
-              //Array('evento', 'Eventos'),
+              Array('service', 'Marker Space'),
               Array('hackerspace', 'Iniciativas')
               );
           if($show_events == true) {
@@ -598,7 +598,8 @@ include_once "header.php";
                   <option value="coworking">Coworking</option>
                   <option value="investidor">Investidor</option>
                   <option value="evento">Evento</option>
-                  <option value="hackerspace">Iniciativa</option> -->
+                  <option value="hackerspace">Iniciativa</option>
+                  <option value="service">Maker Space</option> -->
                 </select>
               </div>
             </div>
